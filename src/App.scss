@@ -1,0 +1,87 @@
+// widths for design
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// colors
+$dark-blue-elements: hsl(209, 23%, 22%);
+$very-dark-blue-background: hsl(207, 26%, 17%);
+$very-dark-blue-text: hsl(200, 15%, 8%);
+$dark-gray-input: hsl(0, 0%, 52%);
+$very-light-gray-background: hsl(0, 0%, 98%);
+$white-text-and-elements: hsl(0, 0%, 100%);
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $very-dark-blue-background;
+  color: $white-text-and-elements;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  transition-duration: 300ms;
+
+  header {
+    align-items: baseline;
+    background-color: $dark-blue-elements;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+    transition-duration: 200ms;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .switcher-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+
+  .theme-switcher {
+    align-items: center;
+    background-color: $very-dark-blue-background;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    height: 10px;
+    justify-content: flex-end;
+    transition-duration: 200ms;
+    width: 50%;
+  }
+
+  .switcher-button {
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.light-mode {
+  background-color: $very-light-gray-background;
+  color: $very-dark-blue-text;
+
+  header {
+    background-color: inherit;
+    box-shadow: none;
+  }
+
+  .theme-switcher {
+    background-color: $dark-gray-input;
+    justify-content: flex-start;
+  }
+
+  .switcher-button {
+    background-color: $very-dark-blue-text;
+  }
+}
