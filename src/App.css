@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-* {
+*, *:before, *:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -11,10 +12,12 @@ body {
   font-size: 14px;
   transition-duration: 300ms;
 }
-body header {
-  align-items: baseline;
+body .shadow-box {
   background-color: #2b3945;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body header {
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
   padding: 30px 15px;
@@ -41,20 +44,82 @@ body .theme-switcher {
   transition-duration: 200ms;
   width: 50%;
 }
-body .switcher-button {
-  border-radius: 100%;
+body button {
   border: none;
   cursor: pointer;
+}
+body .switcher-button {
+  border-radius: 100%;
   height: 15px;
   width: 15px;
+}
+body .box {
+  border: 1px solid #2b3945;
+  border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
+}
+body #search-label {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 15px 30px 15px;
+  padding: 15px 30px;
+}
+body input[type=text] {
+  color: white;
+  background-color: inherit;
+  border: none;
+  margin-left: 30px;
+  padding: 5px;
+  width: 100%;
+}
+body input[type=text]:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+}
+body ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+body :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+body ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+body .dropdown-button {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  padding: 15px 20px;
+  width: 210px;
+}
+body .dropdown-container {
+  position: relative;
+}
+body .dropdown {
+  margin-left: 15px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 55px;
+  width: 210px;
+}
+body .dropdown option {
+  cursor: default;
 }
 
 .light-mode {
   background-color: #fafafa;
   color: #111517;
 }
-.light-mode header {
-  background-color: inherit;
+.light-mode .shadow-box {
+  background-color: white;
   box-shadow: none;
 }
 .light-mode .theme-switcher {
@@ -63,6 +128,33 @@ body .switcher-button {
 }
 .light-mode .switcher-button {
   background-color: #111517;
+}
+.light-mode .box {
+  border-color: white;
+}
+.light-mode .box:hover {
+  border-color: #858585;
+}
+.light-mode #search-label {
+  color: #858585;
+}
+.light-mode input[type=text]:focus {
+  border-bottom-color: #858585;
+}
+.light-mode ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #858585;
+}
+.light-mode :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #858585;
+}
+.light-mode ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #858585;
+}
+.light-mode .dropdown:hover {
+  border-color: white;
 }
 
 /*# sourceMappingURL=App.css.map */
