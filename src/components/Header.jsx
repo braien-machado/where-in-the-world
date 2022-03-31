@@ -8,9 +8,6 @@ export default function Header() {
     setDarkTheme(!darkTheme);
 
     document.querySelector('body').classList.toggle('light-mode');
-    // themeSwitcher.style.justifyContent = darkTheme ? 'flex-end' : 'flex-start';
-
-    // console.log(themeSwitcher);
   };
 
   return (
