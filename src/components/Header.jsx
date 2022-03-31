@@ -17,11 +17,11 @@ export default function Header() {
     <header>
       <h1>Where in the world?</h1>
       <div className="switcher-container">
-        <i className="fas fa-sun" />
+        <i className={`${darkTheme ? 'far' : 'fas'} fa-sun`} />
         <div className="theme-switcher">
           <button className="switcher-button" type="button" onClick={changeTheme} />
         </div>
-        <i className="fas fa-moon" />
+        <i className={`${darkTheme ? 'fas' : 'far'} fa-moon`} />
       </div>
     </header>
   );
