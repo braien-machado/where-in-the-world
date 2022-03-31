@@ -13,9 +13,9 @@ $white-text-and-elements: hsl(0, 0%, 100%);
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 *, *:before, *:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -26,8 +26,8 @@ body {
   transition-duration: 300ms;
 
   .shadow-box {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     background-color: $dark-blue-elements;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
   header {
@@ -70,8 +70,41 @@ body {
     width: 15px;
   }
 
-  input {
-    background-color: none;
+  #search-label {
+    align-items: center;
+    border: 1px solid $dark-blue-elements;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 15px 30px 15px;
+    padding: 15px 30px;
+  }
+  
+  input[type=text] {
+    color: $white-text-and-elements;
+    background-color: inherit;
+    border: 0;
+    margin-left: 30px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  input[type=text]:focus {
+    border-bottom: 1px solid $white-text-and-elements;
+    outline: none;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $white-text-and-elements;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $white-text-and-elements;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $white-text-and-elements;
   }
 }
 
@@ -91,5 +124,48 @@ body {
 
   .switcher-button {
     background-color: $very-dark-blue-text;
+  }
+
+  #search-label {
+    align-items: center;
+    background-color: inherit;
+    border: 1px solid $white-text-and-elements;
+    border-radius: 5px;
+    box-shadow: none;
+    color: $dark-gray-input;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 15px 30px 15px;
+    padding: 15px 30px;
+  }
+
+  #search-label:hover {
+    border: 1px solid $dark-gray-input;
+  }
+  
+  input[type=text] {
+    background-color: inherit;
+    border: 0;
+    color: inherit;
+    margin-left: 30px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  input[type=text]:focus {
+    border-bottom: 1px solid $dark-gray-input;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $dark-gray-input;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $dark-gray-input;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $dark-gray-input;
   }
 }
