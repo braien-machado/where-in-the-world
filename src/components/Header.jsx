@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="shadow-box">
       <h1>Where in the world?</h1>
       <div className="switcher-container">
         <i className={`${darkTheme ? 'far' : 'fas'} fa-sun`} />

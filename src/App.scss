@@ -12,9 +12,10 @@ $white-text-and-elements: hsl(0, 0%, 100%);
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,10 +25,13 @@ body {
   font-size: 14px;
   transition-duration: 300ms;
 
+  .shadow-box {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: $dark-blue-elements;
+  }
+
   header {
     align-items: baseline;
-    background-color: $dark-blue-elements;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
     justify-content: space-between;
     padding: 30px 15px;
@@ -64,6 +68,10 @@ body {
     cursor: pointer;
     height: 15px;
     width: 15px;
+  }
+
+  input {
+    background-color: none;
   }
 }
 

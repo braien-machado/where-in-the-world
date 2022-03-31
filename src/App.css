@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,10 +12,12 @@ body {
   font-size: 14px;
   transition-duration: 300ms;
 }
+body .shadow-box {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #2b3945;
+}
 body header {
   align-items: baseline;
-  background-color: #2b3945;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   display: flex;
   justify-content: space-between;
   padding: 30px 15px;
@@ -47,6 +50,9 @@ body .switcher-button {
   cursor: pointer;
   height: 15px;
   width: 15px;
+}
+body input {
+  background-color: none;
 }
 
 .light-mode {
