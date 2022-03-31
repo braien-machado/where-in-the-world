@@ -145,7 +145,7 @@ body .dropdown option {
 }
 .light-mode input[type=text] {
   background-color: inherit;
-  border: 0;
+  border: none;
   color: inherit;
   margin-left: 30px;
   padding: 5px;
@@ -167,6 +167,23 @@ body .dropdown option {
 .light-mode ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #858585;
+}
+.light-mode .dropdown-button {
+  background-color: inherit;
+  border: 1px solid white;
+  box-shadow: none;
+  color: inherit;
+}
+.light-mode .dropdown-button:hover {
+  border: 1px solid #858585;
+}
+.light-mode .dropdown-container {
+  position: relative;
+}
+.light-mode .dropdown {
+  background-color: inherit;
+  border: 1px solid white;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=App.css.map */
