@@ -76,6 +76,7 @@ body {
   .box {
     border: 1px solid $dark-blue-elements;
     border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
   }
 
   #search-label {
@@ -89,7 +90,7 @@ body {
   input[type=text] {
     color: $white-text-and-elements;
     background-color: inherit;
-    border: 0;
+    border: none;
     margin-left: 30px;
     padding: 5px;
     width: 100%;
@@ -123,13 +124,15 @@ body {
     width: 210px;
   }
 
-  .dropdown-container { position: relative }
+  .dropdown-container {
+    position: relative;
+  }
 
   .dropdown {
     margin-left: 15px;
     padding: 15px 20px;
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 210px;
 
     option {
@@ -142,8 +145,8 @@ body {
   background-color: $very-light-gray-background;
   color: $very-dark-blue-text;
 
-  header {
-    background-color: inherit;
+  .shadow-box {
+    background-color: $white-text-and-elements;
     box-shadow: none;
   }
 
@@ -156,39 +159,24 @@ body {
     background-color: $very-dark-blue-text;
   }
 
-  #search-label {
-    align-items: center;
-    background-color: inherit;
-    border: 1px solid $white-text-and-elements;
-    border-radius: 5px;
-    box-shadow: none;
-    color: $dark-gray-input;
-    display: flex;
-    justify-content: flex-start;
-    margin: 20px 15px 30px 15px;
-    padding: 15px 30px;
+  .box {
+    border-color: $white-text-and-elements;
   }
 
-  #search-label:hover {
-    border: 1px solid $dark-gray-input;
+  .box:hover {
+    border-color: $dark-gray-input;
   }
-  
-  input[type=text] {
-    background-color: inherit;
-    border: none;
-    color: inherit;
-    margin-left: 30px;
-    padding: 5px;
-    width: 100%;
+
+  #search-label {
+    color: $dark-gray-input;
   }
 
   input[type=text]:focus {
-    border-bottom: 1px solid $dark-gray-input;
+    border-bottom-color:  $dark-gray-input;
   }
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $dark-gray-input;
-    opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -199,22 +187,7 @@ body {
     color: $dark-gray-input;
   }
 
-  .dropdown-button {
-    background-color: inherit;
-    border: 1px solid $white-text-and-elements;
-    box-shadow: none;
-    color: inherit;
-  }
-
-  .dropdown-button:hover {
-    border: 1px solid $dark-gray-input;
-  }
-
-  .dropdown-container { position: relative }
-
-  .dropdown {
-    background-color: inherit;
-    border: 1px solid $white-text-and-elements;
-    box-shadow: none;
+  .dropdown:hover {
+    border-color: $white-text-and-elements;
   }
 }

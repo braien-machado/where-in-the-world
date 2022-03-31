@@ -56,6 +56,7 @@ body .switcher-button {
 body .box {
   border: 1px solid #2b3945;
   border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
 }
 body #search-label {
   align-items: center;
@@ -67,7 +68,7 @@ body #search-label {
 body input[type=text] {
   color: white;
   background-color: inherit;
-  border: 0;
+  border: none;
   margin-left: 30px;
   padding: 5px;
   width: 100%;
@@ -106,7 +107,7 @@ body .dropdown {
   margin-left: 15px;
   padding: 15px 20px;
   position: absolute;
-  top: 50px;
+  top: 55px;
   width: 210px;
 }
 body .dropdown option {
@@ -117,8 +118,8 @@ body .dropdown option {
   background-color: #fafafa;
   color: #111517;
 }
-.light-mode header {
-  background-color: inherit;
+.light-mode .shadow-box {
+  background-color: white;
   box-shadow: none;
 }
 .light-mode .theme-switcher {
@@ -128,37 +129,21 @@ body .dropdown option {
 .light-mode .switcher-button {
   background-color: #111517;
 }
+.light-mode .box {
+  border-color: white;
+}
+.light-mode .box:hover {
+  border-color: #858585;
+}
 .light-mode #search-label {
-  align-items: center;
-  background-color: inherit;
-  border: 1px solid white;
-  border-radius: 5px;
-  box-shadow: none;
   color: #858585;
-  display: flex;
-  justify-content: flex-start;
-  margin: 20px 15px 30px 15px;
-  padding: 15px 30px;
-}
-.light-mode #search-label:hover {
-  border: 1px solid #858585;
-}
-.light-mode input[type=text] {
-  background-color: inherit;
-  border: none;
-  color: inherit;
-  margin-left: 30px;
-  padding: 5px;
-  width: 100%;
 }
 .light-mode input[type=text]:focus {
-  border-bottom: 1px solid #858585;
+  border-bottom-color: #858585;
 }
 .light-mode ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #858585;
-  opacity: 1;
-  /* Firefox */
 }
 .light-mode :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -168,22 +153,8 @@ body .dropdown option {
   /* Microsoft Edge */
   color: #858585;
 }
-.light-mode .dropdown-button {
-  background-color: inherit;
-  border: 1px solid white;
-  box-shadow: none;
-  color: inherit;
-}
-.light-mode .dropdown-button:hover {
-  border: 1px solid #858585;
-}
-.light-mode .dropdown-container {
-  position: relative;
-}
-.light-mode .dropdown {
-  background-color: inherit;
-  border: 1px solid white;
-  box-shadow: none;
+.light-mode .dropdown:hover {
+  border-color: white;
 }
 
 /*# sourceMappingURL=App.css.map */
