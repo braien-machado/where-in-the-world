@@ -44,17 +44,21 @@ body .theme-switcher {
   transition-duration: 200ms;
   width: 50%;
 }
-body .switcher-button {
-  border-radius: 100%;
+body button {
   border: none;
   cursor: pointer;
+}
+body .switcher-button {
+  border-radius: 100%;
   height: 15px;
   width: 15px;
 }
-body #search-label {
-  align-items: center;
+body .box {
   border: 1px solid #2b3945;
   border-radius: 5px;
+}
+body #search-label {
+  align-items: center;
   display: flex;
   justify-content: flex-start;
   margin: 20px 15px 30px 15px;
@@ -85,6 +89,28 @@ body :-ms-input-placeholder {
 body ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white;
+}
+body .dropdown-button {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  padding: 15px 20px;
+  width: 210px;
+}
+body .dropdown-container {
+  position: relative;
+}
+body .dropdown {
+  margin-left: 15px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 50px;
+  width: 210px;
+}
+body .dropdown option {
+  cursor: default;
 }
 
 .light-mode {
