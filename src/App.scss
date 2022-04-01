@@ -74,7 +74,6 @@ body {
   }
 
   .box {
-    border: 1px solid $dark-blue-elements;
     border-radius: 5px;
     font-family: 'Nunito Sans', sans-serif;
   }
@@ -88,16 +87,19 @@ body {
   }
   
   input[type=text] {
-    color: $white-text-and-elements;
     background-color: inherit;
-    border: none;
+    border-bottom: 1px solid $dark-blue-elements;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: $white-text-and-elements;
     margin-left: 30px;
     padding: 5px;
     width: 100%;
   }
 
   input[type=text]:focus {
-    border-bottom: 1px solid $white-text-and-elements;
+    border-bottom-color: $white-text-and-elements;
     outline: none;
   }
 
@@ -205,15 +207,20 @@ body {
   }
 
   .box:hover {
-    border-color: $dark-gray-input;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 
   #search-label {
     color: $dark-gray-input;
   }
 
+  input[type=text] {
+    border-bottom-color: $white-text-and-elements;
+    color: $dark-gray-input;
+  }
+
   input[type=text]:focus {
-    border-bottom-color:  $dark-gray-input;
+    border-bottom-color: $dark-gray-input;
   }
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -229,6 +236,12 @@ body {
   }
 
   .dropdown:hover {
+    border-color: $white-text-and-elements;
+  }
+
+  .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-color: $white-text-and-elements;
   }
 }

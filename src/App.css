@@ -54,7 +54,6 @@ body .switcher-button {
   width: 15px;
 }
 body .box {
-  border: 1px solid #2b3945;
   border-radius: 5px;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -66,15 +65,18 @@ body #search-label {
   padding: 15px 30px;
 }
 body input[type=text] {
-  color: white;
   background-color: inherit;
-  border: none;
+  border-bottom: 1px solid #2b3945;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: white;
   margin-left: 30px;
   padding: 5px;
   width: 100%;
 }
 body input[type=text]:focus {
-  border-bottom: 1px solid white;
+  border-bottom-color: white;
   outline: none;
 }
 body ::placeholder {
@@ -167,9 +169,13 @@ body .card span {
   transition-duration: 300ms;
 }
 .light-mode .box:hover {
-  border-color: #858585;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .light-mode #search-label {
+  color: #858585;
+}
+.light-mode input[type=text] {
+  border-bottom-color: white;
   color: #858585;
 }
 .light-mode input[type=text]:focus {
@@ -188,6 +194,10 @@ body .card span {
   color: #858585;
 }
 .light-mode .dropdown:hover {
+  border-color: white;
+}
+.light-mode .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-color: white;
 }
 
