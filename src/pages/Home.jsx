@@ -53,16 +53,18 @@ export default function Home() {
 
   return (
     <main>
-      <label htmlFor="search-input" className="shadow-box box" id="search-label">
-        <i className="fas fa-search" />
-        <input id="search-input" type="text" placeholder="Search for a country..." onChange={({ target: { value } }) => setNameFilter(value)} />
-      </label>
-      <div className="dropdown-container">
-        <button type="button" className="shadow-box box dropdown-button" onClick={toggleDropdown}>
-          {`Filter by Region: ${regionFilter}`}
-          <i className={`fas fa-chevron-${isHidden ? 'down' : 'up'}`} />
-        </button>
-        { isHidden ? null : dropdown() }
+      <div className="filters-container">
+        <label htmlFor="search-input" className="shadow-box box" id="search-label">
+          <i className="fas fa-search" />
+          <input id="search-input" type="text" placeholder="Search for a country..." onChange={({ target: { value } }) => setNameFilter(value)} />
+        </label>
+        <div className="dropdown-container">
+          <button type="button" className="shadow-box box dropdown-button" onClick={toggleDropdown}>
+            {`Filter by Region: ${regionFilter}`}
+            <i className={`fas fa-chevron-${isHidden ? 'down' : 'up'}`} />
+          </button>
+          { isHidden ? null : dropdown() }
+        </div>
       </div>
       <div className="cards-container">
         { countries[0] ? countriesFiltered().map((country) => (

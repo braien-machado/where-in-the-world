@@ -57,10 +57,16 @@ body .box {
   border-radius: 5px;
   font-family: "Nunito Sans", sans-serif;
 }
+body .filters-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
 body #search-label {
   align-items: center;
   display: flex;
   justify-content: flex-start;
+  min-width: 345px;
   margin: 20px 15px 30px 15px;
   padding: 15px 30px;
 }
@@ -98,6 +104,7 @@ body .dropdown-button {
   color: inherit;
   display: flex;
   justify-content: space-between;
+  min-width: 210px;
   margin-left: 15px;
   padding: 15px 20px;
   width: 210px;
@@ -116,15 +123,14 @@ body .dropdown option {
   cursor: default;
 }
 body .cards-container {
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 35px;
-  margin-top: 35px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 35px 26.25px;
 }
 body .card {
   height: 380px;
-  margin-bottom: 35px;
+  margin: 0px 26.25px 35px 26.25px;
   overflow: hidden;
   width: 270px;
 }
