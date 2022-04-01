@@ -54,27 +54,38 @@ body .switcher-button {
   width: 15px;
 }
 body .box {
-  border: 1px solid #2b3945;
   border-radius: 5px;
   font-family: "Nunito Sans", sans-serif;
+}
+body .filters-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 7.5px 0px 7.5px;
 }
 body #search-label {
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  margin: 20px 15px 30px 15px;
+  margin: 10px 7.5px;
+  min-width: 345px;
   padding: 15px 30px;
+  width: 40%;
 }
 body input[type=text] {
-  color: white;
   background-color: inherit;
-  border: none;
+  border-bottom: 1px solid #2b3945;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: white;
   margin-left: 30px;
   padding: 5px;
   width: 100%;
 }
 body input[type=text]:focus {
-  border-bottom: 1px solid white;
+  border-bottom-color: white;
   outline: none;
 }
 body ::placeholder {
@@ -91,20 +102,20 @@ body ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white;
 }
+body .dropdown-container {
+  margin: 10px 7.5px;
+  position: relative;
+}
 body .dropdown-button {
   align-items: center;
   color: inherit;
   display: flex;
   justify-content: space-between;
-  margin-left: 15px;
+  min-width: 210px;
   padding: 15px 20px;
   width: 210px;
 }
-body .dropdown-container {
-  position: relative;
-}
 body .dropdown {
-  margin-left: 15px;
   padding: 15px 20px;
   position: absolute;
   top: 55px;
@@ -112,6 +123,38 @@ body .dropdown {
 }
 body .dropdown option {
   cursor: default;
+}
+body .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 26.25px 35px 26.25px;
+}
+body .card {
+  height: 380px;
+  margin: 0px 26.25px 35px 26.25px;
+  overflow: hidden;
+  width: 270px;
+}
+body .card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+body .card .card-info {
+  margin-left: 30px;
+}
+body .card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+body .card p {
+  margin-top: 10px;
+}
+body .card span {
+  font-weight: 600;
+  margin-right: 5px;
 }
 
 .light-mode {
@@ -131,11 +174,16 @@ body .dropdown option {
 }
 .light-mode .box {
   border-color: white;
+  transition-duration: 300ms;
 }
 .light-mode .box:hover {
-  border-color: #858585;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .light-mode #search-label {
+  color: #858585;
+}
+.light-mode input[type=text] {
+  border-bottom-color: white;
   color: #858585;
 }
 .light-mode input[type=text]:focus {
@@ -153,7 +201,8 @@ body .dropdown option {
   /* Microsoft Edge */
   color: #858585;
 }
-.light-mode .dropdown:hover {
+.light-mode .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-color: white;
 }
 
