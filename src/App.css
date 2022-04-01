@@ -193,9 +193,6 @@ body .card span {
   /* Microsoft Edge */
   color: #858585;
 }
-.light-mode .dropdown:hover {
-  border-color: white;
-}
 .light-mode .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-color: white;
