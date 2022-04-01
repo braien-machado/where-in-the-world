@@ -7,12 +7,23 @@ export default function CountryCard({ country }) {
   } = country;
 
   return (
-    <div className="shadow-box box">
+    <div className="shadow-box box card">
       <img src={flag} alt={`${name}'s flag`} />
-      <h2>{name}</h2>
-      <p>{`Population: ${Number(population).toLocaleString()}`}</p>
-      <p>{`Region: ${region}`}</p>
-      <p>{`Capital: ${capital}`}</p>
+      <div className="card-info">
+        <h2>{name}</h2>
+        <p>
+          <span>Population:</span>
+          {Number(population).toLocaleString()}
+        </p>
+        <p>
+          <span>Region:</span>
+          {region}
+        </p>
+        <p>
+          <span>Capital:</span>
+          {capital}
+        </p>
+      </div>
     </div>
   );
 }

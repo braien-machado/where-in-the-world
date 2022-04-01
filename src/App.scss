@@ -139,6 +139,46 @@ body {
       cursor: default;
     }
   }
+
+  .cards-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+
+  .card {
+    height: 380px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    width: 270px;
+
+    img {
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .card-info {
+      margin-left: 30px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    span {
+      font-weight: 600;
+      margin-right: 5px;
+    }
+  }
 }
 
 .light-mode {

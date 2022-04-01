@@ -49,9 +49,11 @@ export default function Home() {
         </button>
         { isHidden ? null : dropdown() }
       </div>
-      { countries[0] ? countries.map((country) => (
-        <CountryCard key={country.name} country={country} />
-      )) : null }
+      <div className="cards-container">
+        { countries[0] ? countries.map((country) => (
+          <CountryCard key={country.name} country={country} />
+        )) : null }
+      </div>
     </main>
   );
 }
