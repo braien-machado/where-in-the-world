@@ -82,15 +82,18 @@ body {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 7.5px 0px 7.5px;
   }
 
   #search-label {
     align-items: center;
     display: flex;
     justify-content: flex-start;
+    margin: 10px 7.5px;
     min-width: 345px;
-    margin: 20px 15px 30px 15px;
     padding: 15px 30px;
+    width: 40%;
   }
   
   input[type=text] {
@@ -123,23 +126,22 @@ body {
     color: $white-text-and-elements;
   }
 
+  .dropdown-container {
+    margin: 10px 7.5px;
+    position: relative;
+  }
+
   .dropdown-button {
     align-items: center;
     color: inherit;
     display: flex;
     justify-content: space-between;
     min-width: 210px;
-    margin-left: 15px;
     padding: 15px 20px;
     width: 210px;
   }
 
-  .dropdown-container {
-    position: relative;
-  }
-
   .dropdown {
-    margin-left: 15px;
     padding: 15px 20px;
     position: absolute;
     top: 55px;
@@ -154,7 +156,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 35px 26.25px;
+    margin: 25px 26.25px 35px 26.25px;
   }
 
   .card {
