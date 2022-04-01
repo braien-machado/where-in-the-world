@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { getAllCountries } from '../services/countriesApi';
+import CountryCard from '../components/CountryCard';
 
 export default function Home() {
-  const [region, setRegion] = useState('');
+  const [regionFilter, setRegionFilter] = useState('All');
   const [isHidden, setIsHidden] = useState(true);
+  const [countries, setCountries] = useState([]);
+
+  useEffect(async () => {
+    const countriesFromApi = await getAllCountries();
+    setCountries(countriesFromApi);
+  }, []);
 
   const toggleDropdown = () => {
     setIsHidden(!isHidden);
@@ -14,9 +22,10 @@ export default function Home() {
       <div className="shadow-box box dropdown">
         {options.map((option) => (
           <option
+            key={option}
             value={option}
             onClick={() => {
-              setRegion(option);
+              setRegionFilter(option);
               toggleDropdown();
             }}
           >
@@ -35,11 +44,14 @@ export default function Home() {
       </label>
       <div className="dropdown-container">
         <button type="button" className="shadow-box box dropdown-button" onClick={toggleDropdown}>
-          {`Filter by Region: ${region}`}
+          {`Filter by Region: ${regionFilter}`}
           <i className="fas fa-chevron-circle-down" />
         </button>
         { isHidden ? null : dropdown() }
       </div>
+      { countries[0] ? countries.map((country) => (
+        <CountryCard key={country.name} country={country} />
+      )) : null }
     </main>
   );
 }

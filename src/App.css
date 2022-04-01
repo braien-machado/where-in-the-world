@@ -131,6 +131,7 @@ body .dropdown option {
 }
 .light-mode .box {
   border-color: white;
+  transition-duration: 300ms;
 }
 .light-mode .box:hover {
   border-color: #858585;

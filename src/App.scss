@@ -161,6 +161,7 @@ body {
 
   .box {
     border-color: $white-text-and-elements;
+    transition-duration: 300ms;
   }
 
   .box:hover {
