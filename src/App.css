@@ -131,9 +131,11 @@ body .cards-container {
   margin: 25px 26.25px 35px 26.25px;
 }
 body .card {
+  color: inherit;
   height: 380px;
   margin: 0px 26.25px 35px 26.25px;
   overflow: hidden;
+  text-decoration: none;
   width: 270px;
 }
 body .card img {

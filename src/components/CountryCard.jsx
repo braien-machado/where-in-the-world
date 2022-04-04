@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export default function CountryCard({ country }) {
@@ -7,7 +8,7 @@ export default function CountryCard({ country }) {
   } = country;
 
   return (
-    <div className="shadow-box box card">
+    <Link to={`/detail/${name.toLowerCase()}`} className="shadow-box box card">
       <img src={flag} alt={`${name}'s flag`} />
       <div className="card-info">
         <h2>{name}</h2>
@@ -24,7 +25,7 @@ export default function CountryCard({ country }) {
           {capital}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 
