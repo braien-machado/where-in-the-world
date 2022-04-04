@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-async function getAllCountries() {
+export async function getAllCountries() {
   try {
     const response = await axios.get('https://restcountries.com/v2/all')
       .then(({ data }) => {
@@ -22,7 +22,7 @@ async function getAllCountries() {
   }
 }
 
-async function getCountryByName(countryName) {
+export async function getCountryByName(countryName) {
   try {
     const response = await axios.get(`https://restcountries.com/v3.1/name/${countryName}`)
       .then(({ data }) => {
@@ -57,7 +57,7 @@ async function getCountryByName(countryName) {
   }
 }
 
-async function getBorderCountriesName(array) {
+export async function getBorderCountriesName(array) {
   try {
     const response = await axios.get(`https://restcountries.com/v3.1/alpha?codes=${array.join(',')}`)
       .then(({ data }) => {
@@ -76,9 +76,3 @@ async function getBorderCountriesName(array) {
     return [];
   }
 }
-
-module.exports = {
-  getAllCountries,
-  getCountryByName,
-  getBorderCountriesName,
-};
