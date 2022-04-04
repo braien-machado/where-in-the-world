@@ -23,6 +23,4 @@ async function getAllCountries() {
   }
 }
 
-module.exports = {
-  getAllCountries,
-};
+export default getAllCountries;
