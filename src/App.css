@@ -46,6 +46,7 @@ body .theme-switcher {
 }
 body button {
   border: none;
+  color: inherit;
   cursor: pointer;
 }
 body .switcher-button {
@@ -157,6 +158,50 @@ body .card p {
 body .card span {
   font-weight: 600;
   margin-right: 5px;
+}
+body .back-btn {
+  margin: 30px 0px 0px 20px;
+  padding: 5px 15px;
+}
+body .back-btn i {
+  margin-right: 10px;
+}
+body .country-info {
+  margin: 50px 37.5px;
+}
+body .country-info img {
+  height: 180px;
+  object-fit: cover;
+  width: 300px;
+}
+body .country-info h1 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+body .country-info p {
+  margin-top: 10px;
+}
+body .country-info span {
+  font-weight: 600;
+  margin-right: 5px;
+}
+body .country-info .secondary-details, body .country-info .border-info {
+  margin-top: 30px;
+}
+body .country-info .border-info h2 {
+  font-size: 1rem;
+}
+body .country-info .border-info div {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .country-info .border-info a {
+  color: inherit;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 5px 15px;
+  text-decoration: none;
 }
 
 .light-mode {

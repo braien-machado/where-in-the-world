@@ -15,7 +15,7 @@ export default function Detail() {
   }, []);
 
   const backButton = () => (
-    <button type="button" onClick={() => navigate('/')}>
+    <button className="shadow-box box back-btn" type="button" onClick={() => navigate('/')}>
       <i className="fas fa-long-arrow-alt-left" />
       Back
     </button>
@@ -71,8 +71,12 @@ export default function Detail() {
         </div>
         { !borders.length ? null : (
           <div className="border-info">
-            <h1>Border Countries:</h1>
-            {borders.join(', ')}
+            <h2>Border Countries:</h2>
+            <div>
+              {borders.map((border) => (
+                <a className="shadow-box box" key={border} href={`/detail/${border.toLowerCase()}`}>{border}</a>
+              ))}
+            </div>
           </div>
         ) }
       </div>
