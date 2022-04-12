@@ -17,10 +17,10 @@ body .shadow-box {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 body header {
-  align-items: baseline;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 30px 15px;
+  padding: 30px 37.5px;
   transition-duration: 200ms;
 }
 body h1 {
@@ -46,6 +46,7 @@ body .theme-switcher {
 }
 body button {
   border: none;
+  color: inherit;
   cursor: pointer;
 }
 body .switcher-button {
@@ -131,9 +132,11 @@ body .cards-container {
   margin: 25px 26.25px 35px 26.25px;
 }
 body .card {
+  color: inherit;
   height: 380px;
   margin: 0px 26.25px 35px 26.25px;
   overflow: hidden;
+  text-decoration: none;
   width: 270px;
 }
 body .card img {
@@ -156,10 +159,82 @@ body .card span {
   font-weight: 600;
   margin-right: 5px;
 }
+body .back-btn {
+  margin: 37.5px 0px 0px 37.5px;
+  padding: 5px 15px;
+}
+body .back-btn i {
+  margin-right: 10px;
+}
+body .country-container {
+  margin: 37.5px;
+}
+body .country-container img {
+  height: fit-content;
+  max-width: 40%;
+  min-width: 300px;
+  object-fit: contain;
+}
+body .country-container h1 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+body .country-container p {
+  margin-top: 10px;
+}
+body .country-container span {
+  font-weight: 600;
+  margin-right: 5px;
+}
+body .country-container .secondary-details, body .country-container .border-info {
+  margin-top: 30px;
+}
+body .country-container .border-info h2 {
+  font-size: 1rem;
+}
+body .country-container .border-info div {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .country-container .border-info a {
+  color: inherit;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+@media (min-width: 780px) {
+  body .country-container {
+    display: flex;
+  }
+  body .country-container h1 {
+    margin-top: 0px;
+    font-size: 2rem;
+  }
+  body .country-container .info-container {
+    margin-left: 50px;
+  }
+  body .country-container .details-container {
+    display: flex;
+  }
+  body .country-container .secondary-details {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  body header h1 {
+    font-size: 1.5rem;
+  }
+}
 
 .light-mode {
   background-color: #fafafa;
   color: #111517;
+}
+@media (min-width: 780px) {
+  .light-mode .country-container img {
+    border: 1px solid #d8d8d8;
+  }
 }
 .light-mode .shadow-box {
   background-color: white;

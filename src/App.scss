@@ -1,6 +1,6 @@
 // widths for design
 $mobile-width: 375px;
-$desktop-width: 1440px;
+$desktop-width: 780px;
 
 // colors
 $dark-blue-elements: hsl(209, 23%, 22%);
@@ -31,10 +31,10 @@ body {
   }
 
   header {
-    align-items: baseline;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 30px 15px;
+    padding: 30px 37.5px;
     transition-duration: 200ms;
   }
 
@@ -64,6 +64,7 @@ body {
 
   button {
     border: none;
+    color: inherit;
     cursor: pointer;
   }
 
@@ -160,9 +161,11 @@ body {
   }
 
   .card {
+    color: inherit;
     height: 380px;
     margin: 0px 26.25px 35px 26.25px;
     overflow: hidden;
+    text-decoration: none;
     width: 270px;
 
     img {
@@ -190,11 +193,104 @@ body {
       margin-right: 5px;
     }
   }
+
+  .back-btn {
+    margin: 37.5px 0px 0px 37.5px; 
+    padding: 5px 15px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .country-container {
+    margin: 37.5px;
+
+    img {
+      height: fit-content;
+      max-width: 40%;
+      min-width: 300px;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    span {
+      font-weight: 600;
+      margin-right: 5px;
+    }
+
+    .secondary-details, .border-info {
+      margin-top: 30px;
+    }
+
+    .border-info {
+      h2 {
+        font-size: 1rem;
+      }
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      a {
+        color: inherit;
+        margin-right: 10px;
+        margin-top: 15px;
+        padding: 5px 15px;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  @media (min-width: $desktop-width) {
+    .country-container {
+      display: flex;
+
+      h1 {
+        margin-top: 0px;
+        font-size: 2rem;
+      }
+
+      .info-container {
+        margin-left: 50px;
+      }
+
+      .details-container {
+        display: flex;
+      }
+
+      .secondary-details {
+        margin-top: 0px;
+        margin-left: 30px;
+      }
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .light-mode {
   background-color: $very-light-gray-background;
   color: $very-dark-blue-text;
+
+  @media (min-width: $desktop-width) {
+    .country-container img {
+      border: 1px solid rgb(216, 216, 216);
+    }
+  }
 
   .shadow-box {
     background-color: $white-text-and-elements;
@@ -246,7 +342,8 @@ body {
 
   .card:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-color: $white-text-and-elements;
   }
 }
+
+
