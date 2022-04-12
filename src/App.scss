@@ -50,28 +50,66 @@ body {
     width: 80px;
   }
 
-  .theme-switcher {
-    align-items: center;
-    background-color: $very-dark-blue-background;
-    border-radius: 50px;
-    border: none;
-    display: flex;
-    height: 10px;
-    justify-content: flex-end;
-    transition-duration: 200ms;
-    width: 50%;
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white-text-and-elements;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    right: 3px;
+    bottom: 3px;
+    background-color: $dark-blue-elements;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: $very-dark-blue-text;
+  }
+
+  input:checked + .slider:before {
+    background-color: $white-text-and-elements;
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  .slider.round {
+    border-radius: 20px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
   }
 
   button {
     border: none;
     color: inherit;
     cursor: pointer;
-  }
-
-  .switcher-button {
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
   }
 
   .box {
@@ -286,24 +324,13 @@ body {
   background-color: $very-light-gray-background;
   color: $very-dark-blue-text;
 
-  @media (min-width: $desktop-width) {
-    .country-container img {
-      border: 1px solid rgb(216, 216, 216);
-    }
+  .country-container img {
+    border: 1px solid rgb(216, 216, 216);
   }
 
   .shadow-box {
     background-color: $white-text-and-elements;
     box-shadow: none;
-  }
-
-  .theme-switcher {
-    background-color: $dark-gray-input;
-    justify-content: flex-start;
-  }
-
-  .switcher-button {
-    background-color: $very-dark-blue-text;
   }
 
   .box {
