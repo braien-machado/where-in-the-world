@@ -30,55 +30,59 @@ export default function Detail() {
   return (
     <div>
       {backButton()}
-      <div className="country-info">
+      <div className="country-container">
         <img src={flag} alt={name.common} />
-        <h1>{name.common}</h1>
-        <div className="main-details">
-          <p>
-            <span>Native Name(s): </span>
-            {Object.values(name.nativeName).map((nativeName) => nativeName.common).join(', ')}
-          </p>
-          <p>
-            <span>Population: </span>
-            {Number(population).toLocaleString()}
-          </p>
-          <p>
-            <span>Region: </span>
-            {region}
-          </p>
-          <p>
-            <span>Sub Region: </span>
-            {subregion}
-          </p>
-          <p>
-            <span>Capital: </span>
-            {capital}
-          </p>
-        </div>
-        <div className="secondary-details">
-          <p>
-            <span>Top Level Domain: </span>
-            {tld}
-          </p>
-          <p>
-            <span>Currencies: </span>
-            {Object.values(currencies).map((currency) => currency.name).join(', ')}
-          </p>
-          <p>
-            <span>Languages: </span>
-            {Object.values(languages).join(', ')}
-          </p>
-        </div>
-        { !borders.length ? null : (
-          <div className="border-info">
-            <h2>Border Countries:</h2>
-            <div>
-              {borders.map((border) => (
-                <a className="shadow-box box" key={border} href={`/detail/${border.toLowerCase()}`}>{border}</a>
-              ))}
+        <div className="info-container">
+          <h1>{name.common}</h1>
+          <div className="details-container">
+            <div className="main-details">
+              <p>
+                <span>Native Name(s): </span>
+                {Object.values(name.nativeName).map((nativeName) => nativeName.common).join(', ')}
+              </p>
+              <p>
+                <span>Population: </span>
+                {Number(population).toLocaleString()}
+              </p>
+              <p>
+                <span>Region: </span>
+                {region}
+              </p>
+              <p>
+                <span>Sub Region: </span>
+                {subregion}
+              </p>
+              <p>
+                <span>Capital: </span>
+                {capital}
+              </p>
+            </div>
+            <div className="secondary-details">
+              <p>
+                <span>Top Level Domain: </span>
+                {tld}
+              </p>
+              <p>
+                <span>Currencies: </span>
+                {Object.values(currencies).map((currency) => currency.name).join(', ')}
+              </p>
+              <p>
+                <span>Languages: </span>
+                {Object.values(languages).join(', ')}
+              </p>
             </div>
           </div>
-        ) }
+          { !borders.length ? null : (
+            <div className="border-info">
+              <h2>Border Countries:</h2>
+              <div>
+                {borders.map((border) => (
+                  <a className="shadow-box box" key={border} href={`/detail/${border.toLowerCase()}`}>{border}</a>
+                ))}
+              </div>
+            </div>
+          ) }
+        </div>
       </div>
     </div>
   );
