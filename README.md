@@ -59,17 +59,18 @@ Here it goes the pros:
 - Nesting makes the code more readable
 - Theme variations are easy to write
 
-The cons:
-- Overly nested rules makes it hard to maintain and I needed to be aware all the time to not produce such problem. 
 ```sass
-.parent-element {
-  color: color;
+header {
+  background-color: white
 
-  .element-inside {
-    color: another-color;
+  h1 {
+    font-size: 1.2rem
   }
 }
 ```
+
+The cons:
+- Overly nested rules makes it hard to maintain and I needed to be aware all the time to not produce such problem. 
 
 For the region filter dropdown, I used js instead of conventional `select` tag.
 Googling I found it would be easier to style and it really was!
